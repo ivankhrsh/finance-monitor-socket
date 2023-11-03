@@ -1,4 +1,4 @@
-import StockTicker from "./tickers";
+import StockTicker from './tickers.type';
 
 export type StockData = {
   [K in keyof typeof StockTicker]: {

@@ -1,4 +1,4 @@
-import { StockData } from "./IStockData";
+import { StockData } from './stockItem.type';
 
 export interface StocksState {
   stocks: StockData[];

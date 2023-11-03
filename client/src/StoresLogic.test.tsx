@@ -1,9 +1,9 @@
 import { socketConnect, socketDisconnect } from './store/slices/socket/socket.slice';
 import socketSlice from './store/slices/socket/socket.slice';
 import stocksSlice, { updateStocks } from './store/slices/stocks/stocks.slice';
-import { StockData } from './types/IStockData';
-import { StocksState } from './types/stockState';
-import { typeConnect } from './types/typeConnect';
+import { StockData } from './types/stockItem.type';
+import { StocksState } from './types/stockState.type';
+import { typeConnect } from './types/typeConnect.type';
 
 describe('socket state reducer', () => {
   const initialState = {
@@ -11,9 +11,11 @@ describe('socket state reducer', () => {
   };
 
   it('should handle initial state', () => {
-    expect(socketSlice(undefined, {
-      type: undefined
-    })).toEqual(initialState);
+    expect(
+      socketSlice(undefined, {
+        type: undefined
+      })
+    ).toEqual(initialState);
   });
 
   it('should handle connect', () => {
@@ -39,33 +41,33 @@ describe('socket state reducer', () => {
   });
 });
 
-
 describe('stocks state reducer', () => {
   const initialState: StocksState = {
     stocks: []
-  }
+  };
 
   it('should handle initial state', () => {
-    expect(stocksSlice(undefined, {
-      type: undefined
-    })).toEqual(initialState);
+    expect(
+      stocksSlice(undefined, {
+        type: undefined
+      })
+    ).toEqual(initialState);
   });
 
   it('should update state', () => {
     const stocks: StockData[] = [
       {
-        ticker: "AAPL",
-        exchange: "NASDAQ",
+        ticker: 'AAPL',
+        exchange: 'NASDAQ',
         price: 241.28,
         change: -17.03,
         change_percent: -7.06,
-        dividend: 0.90,
+        dividend: 0.9,
         yield: 1.79,
-        last_trade_time: "2023-11-02T20:23:29.000Z",
+        last_trade_time: '2023-11-02T20:23:29.000Z'
       }
-    ]
+    ];
 
     expect(stocksSlice(initialState, updateStocks({ stocks }))).toEqual({ stocks });
   });
-
 });

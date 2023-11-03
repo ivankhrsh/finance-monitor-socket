@@ -1,10 +1,10 @@
-import {createSlice } from '@reduxjs/toolkit'
-import { SocketState } from '../../../types/socketState'
-import { typeConnect } from '../../../types/typeConnect'
+import { createSlice } from '@reduxjs/toolkit';
+import type { SocketState } from '../../../types/socketState.type';
+import { typeConnect } from '../../../types/typeConnect.type';
 
 const initialState: SocketState = {
   connect: typeConnect.Disconnected
-}
+};
 
 const socketSlice = createSlice({
   name: 'webSocket',
@@ -19,5 +19,5 @@ const socketSlice = createSlice({
   }
 });
 
-export const { socketConnect, socketDisconnect} = socketSlice.actions;
+export const { socketConnect, socketDisconnect } = socketSlice.actions;
 export default socketSlice.reducer;

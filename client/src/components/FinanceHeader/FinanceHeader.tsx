@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-function FinanceHeader() {
+function FinanceHeader () {
   return (
     <>
-      <h1 className="mt-5 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Finance App 📈</h1>
+      <h1 className="mt-5 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+        Finance App 📈
+      </h1>
       <p className="mt-2 text-base leading-7 text-gray-600 mb-2">Stock market prices in realtime</p>
       <a
         href="https://github.com/ivankhrsh/finance-test-task"
@@ -14,7 +16,7 @@ function FinanceHeader() {
         📂 Github
       </a>
     </>
-  );
+  )
 }
 
-export default FinanceHeader;
+export default FinanceHeader
