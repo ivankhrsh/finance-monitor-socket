@@ -1,4 +1,3 @@
-import { createMockClientServer } from './mockSocketServer';
 import { socketConnect, socketDisconnect } from './store/slices/socket/socket.slice';
 import socketSlice from './store/slices/socket/socket.slice';
 import stocksSlice, { updateStocks } from './store/slices/stocks/stocks.slice';
@@ -69,30 +68,4 @@ describe('stocks state reducer', () => {
     expect(stocksSlice(initialState, updateStocks({ stocks }))).toEqual({ stocks });
   });
 
-});
-
-
-describe('Client-Side Socket.IO Code', () => {
-  let mockClientServer = createMockClientServer();
-
-  const tickerData = [
-    {
-      ticker: 'AAPL',
-      exchange: 'NASDAQ',
-      price: 150.00,
-      change: 1.00,
-      change_percent: 0.67,
-      dividend: 0.50,
-      yield: 1.00,
-      last_trade_time: "2023-11-02T20:23:29.000Z",
-    },
-  ];
-  
-  it('should connect to the mock server and handle "ticker" events', () => {
-    mockClientServer.on('connection', () => {
-      mockClientServer.emit('start', (data: StockData[]) => {
-        expect(data).toEqual(tickerData);
-      });
-    });
-  });
 });

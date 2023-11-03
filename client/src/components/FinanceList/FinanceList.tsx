@@ -13,6 +13,12 @@ function FinanceList() {
           <FinanceItem key={item.ticker} item={item} />
         ))
       )}
+
+      {(stocks && stocks.length === 0) && (
+        <h2 className='leading-7 text-gray-900 text-lg'>
+          No active stocks...
+        </h2>
+      )}
     </div>
   );
 }

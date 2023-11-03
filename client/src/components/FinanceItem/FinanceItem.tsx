@@ -9,10 +9,15 @@ interface Props {
 
 const FinanceItem: FC<Props> = ({ item }) => {
   const companyName = StockTicker[item.ticker] || item.ticker;
-  const textColorClass = item.change_percent >= 1 ? 'text-green-600' : 'text-red-600';
-  const arrowColor = item.change_percent >= 1 ? 'bg-green-100' : 'bg-red-100';
+  const isChangePercentPositive = item.change_percent >= 1 ;
 
-  const arrowIcon = item.change_percent >= 1 ? <ArrowUp/> : <ArrowDown/>;
+  //check conditions which color to use for displaying item
+  const textColorClass = isChangePercentPositive ? 'text-green-600' : 'text-red-600';
+  const arrowColor = isChangePercentPositive ? 'bg-green-100' : 'bg-red-100';
+  const arrowIcon = isChangePercentPositive ? <ArrowUp/> : <ArrowDown/>;
+
+  //proper formatting  for value with minus
+  const changeValue = item.change < 0 ? `-$${Math.abs(item.change)}` : `$${item.change}`;
 
   return (
     <div 
@@ -27,7 +32,7 @@ const FinanceItem: FC<Props> = ({ item }) => {
         <p className="font-bold text-xl mb-2 md:text-2xl">{companyName}</p>
         <p className="text-gray-700 md:text-lg">Price: ${item.price}</p>
         <p className="text-gray-700 md:text-lg">
-          Change: {item.change < 0 ? `-$${Math.abs(item.change)}` : `$${item.change}`}
+          Change: {changeValue}
         </p>
         <p className={`text-lg ${textColorClass} md:text-xl`}>
           Change Percent: {item.change_percent}%

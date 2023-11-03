@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "src/AppUI.test.tsx", "src/StoresLogic.test.tsx", "src/mockSocketServer.ts"  ]
 }
