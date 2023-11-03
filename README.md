@@ -1,6 +1,16 @@
 
 # React Test Task
 
+![image_2023-11-02_23-04-43](https://github.com/ivankhrsh/finance-test-task/assets/66055069/08bf76ea-104f-4d48-bd04-3a0f8345b870)
+
+Implemented features:
+- application connect to the locally running service
+- application render price changes for tickers in real time
+- simple and minimalistic adaptive design 
+- visual effects to highlight positive or negative changes in the prices ( arrows for visualizing changes, green color - price increase, red color - price decrease)
+- add change percent calculation that depends on price and change values (on server) 
+- tests
+
 ## Requirements
 
 We need you to implement a solution to display price tickers data on the UI in realtime.
