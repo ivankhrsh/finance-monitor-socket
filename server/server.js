@@ -27,17 +27,22 @@ function utcDate() {
 }
 
 function getQuotes(socket) {
+  const quotes = tickers.map(ticker => {
+    const price = randomValue(100, 300, 2);
+    const change = randomValue(-200, 200, 2);
+    const change_percent = ((change / price) * 100).toFixed(2);
 
-  const quotes = tickers.map(ticker => ({
-    ticker,
-    exchange: 'NASDAQ',
-    price: randomValue(100, 300, 2),
-    change: randomValue(0, 200, 2),
-    change_percent: randomValue(0, 1, 2),
-    dividend: randomValue(0, 1, 2),
-    yield: randomValue(0, 2, 2),
-    last_trade_time: utcDate(),
-  }));
+    return {
+      ticker,
+      exchange: 'NASDAQ',
+      price,
+      change,
+      change_percent,
+      dividend: randomValue(0, 1, 2),
+      yield: randomValue(0, 2, 2),
+      last_trade_time: utcDate(),
+    };
+  });
 
   socket.emit('ticker', quotes);
 }
