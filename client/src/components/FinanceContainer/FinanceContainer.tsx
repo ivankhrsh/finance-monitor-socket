@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FinanceList from '../FinanceList/FinanceList';
+import { useAppDispatch } from '../../hooks/useDispatch';
+import { socketConnect } from '../../store/slices/socket/socket.slice';
+import FinanceHeader from '../FinanceHeader/FinanceHeader';
 
 function FinanceContainer() {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(socketConnect())
+  })
+
   return (
-    <div className="h-full w-full">
-      <div className="text-center">
-        <h1 className="mt-4 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Finance App</h1>
-          <p className="mt-2 text-base leading-7 text-gray-600">Price tickers data in realtime</p>
-          <FinanceList/>
+    <div className="h-full flex flex-col items-center justify-center">
+      <div className="text-center max-w-screen-lg">
+        <FinanceHeader/>
+        <FinanceList />
       </div>
     </div>
   );

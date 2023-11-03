@@ -1,9 +1,13 @@
 import React from 'react';
 import FinanceContainer from './components/FinanceContainer/FinanceContainer';
+import { ToastContainer } from "react-toast";
 
 function App() {
   return (
-    <FinanceContainer/>
+    <>
+      <ToastContainer position='bottom-center'/>
+      <FinanceContainer/>
+    </>
   );
 }
 
