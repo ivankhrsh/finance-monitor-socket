@@ -1,6 +1,47 @@
 
 # React Test Task
 
+![image_2023-11-02_23-04-43](https://github.com/ivankhrsh/finance-test-task/assets/66055069/08bf76ea-104f-4d48-bd04-3a0f8345b870)
+
+Implemented features:
+- application connect to the locally running service
+- application render price changes for tickers in real time
+- simple and minimalistic adaptive design 
+- visual effects to highlight positive or negative changes in the prices ( arrows for visualizing changes, green color - price increase, red color - price decrease)
+- add change percent calculation that depends on price and change values (on server) 
+- tests
+
+Technologies used in the project:
+
+<p align="left">
+  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" align="center" alt="html5" width="40" height="40"/>
+  </a>
+
+  <a href="tailwindcss.com/" target="_blank" rel="noreferrer"> 
+    <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" align="center" alt="typescript" width="40" height="40"/>
+  </a>
+
+  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" align="center" alt="react" width="40" height="40"/> 
+  </a>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" align="center" alt="javascript" width="40" height="40"/> 
+  </a> 
+
+  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" align="center" alt="typescript" width="40" height="40"/>
+  </a>
+
+  <a href="https://socket.io/" target="_blank" rel="noreferrer"> 
+    <img src="https://socket.io/images/logo-dark.svg" align="center" alt="socket.io" width="40" height="40"/>
+  </a>
+
+  <a href="https://jestjs.io/" target="_blank" rel="noreferrer"> 
+    <img src="https://www.testautomatisierung.org/wp-content/uploads/jest-icon.jpg" align="center" alt="jestjs.io" width="40" height="40"/>
+  </a>
+
 ## Requirements
 
 We need you to implement a solution to display price tickers data on the UI in realtime.
