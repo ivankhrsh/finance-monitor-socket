@@ -26,6 +26,10 @@ Technologies used in the project:
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" align="center" alt="react" width="40" height="40"/> 
   </a>
 
+   <a href="https://tanstack.com/query/v3/" target="_blank" rel="noreferrer"> 
+    <img src="https://seeklogo.com/images/R/react-query-logo-1340EA4CE9-seeklogo.com.png" align="center" alt="react" width="40" height="40"/> 
+  </a>
+
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" align="center" alt="javascript" width="40" height="40"/> 
   </a> 
