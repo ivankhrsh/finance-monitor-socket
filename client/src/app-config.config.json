@@ -1,5 +1,5 @@
 {
   "webSocket": {
-    "connect": "ws://localhost:4000"
+    "connect": "wss://finance-sockets.onrender.com/"
   }
 }
